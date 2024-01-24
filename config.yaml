@@ -13,7 +13,6 @@ images:
     - apm/apm-server
     - app-search/app-search
   quay.io:
-    - coreos/flannel
     - ceph/ceph
     - cephcsi/cephcsi
     - csiaddons/k8s-sidecar
@@ -26,21 +25,18 @@ images:
     - prometheus-operator/prometheus-config-reloader
     - prometheus-operator/prometheus-operator
     - brancz/kube-rbac-proxy
-  k8s.gcr.io:
-    - conformance
-    - dns/k8s-dns-node-cache
-    - metrics-server/metrics-server
-    - kube-state-metrics/kube-state-metrics
-    - prometheus-adapter/prometheus-adapter
-    - sig-storage/nfs-subdir-external-provisioner
-    - sig-storage/csi-node-driver-registrar
-    - sig-storage/csi-provisioner
-    - sig-storage/csi-resizer
-    - sig-storage/csi-snapshotter
-    - sig-storage/csi-attacher
+    - cilium/cilium
+    - cilium/tetragon
+    - cilium/operator
+    - cilium/operator-generic
+    - cilium/hubble-relay
+    - cilium/hubble-ui
+    - cilium/hubble-ui-backend
+    - cilium/cilium-envoy
   registry.k8s.io:
     - pause
     - etcd
+    - conformance
     - kube-proxy
     - kube-apiserver
     - kube-scheduler
@@ -49,6 +45,16 @@ images:
     - ingress-nginx/controller
     - ingress-nginx/controller-chroot
     - ingress-nginx/kube-webhook-certgen
+    - metrics-server/metrics-server
+    - dns/k8s-dns-node-cache
+    - sig-storage/nfs-subdir-external-provisioner
+    - sig-storage/csi-node-driver-registrar
+    - sig-storage/csi-provisioner
+    - sig-storage/csi-resizer
+    - sig-storage/csi-snapshotter
+    - sig-storage/csi-attacher
+    - kube-state-metrics/kube-state-metrics
+    - prometheus-adapter/prometheus-adapter
   gcr.io:
     - kaniko-project/executor
   docker.io:
@@ -56,3 +62,9 @@ images:
     - calico/pod2daemon-flexvol
     - calico/kube-controllers
     - calico/node
+    - flannel/flannel
+    - flannel/flannel-cni-plugin
+  ghcr.io:
+    - coroot/coroot
+    - coroot/coroot-cluster-agent
+    - coroot/coroot-node-agent
